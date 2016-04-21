@@ -12,5 +12,20 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
+});
+
+
+Route::get('/register', function () {
+    return view('register');
+});
+
+
+Route::get('/user', function () {
+    return view('homeUser');
+});
+
+
+Route::get('/admin', function () {
+    return view('homeAdmin');
 });
