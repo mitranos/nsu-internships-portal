@@ -23,7 +23,7 @@
 <body>
 <header id="header" class="container">
     <div class="row">
-        <div class="col-md-3 col-md-offset-1 col-sm-4 col-sm-offset-0" id="logo"><a href="http://www.nova.edu/" target="_blank"><img src="../images/logo.png" width="239" height="61" border="0" alt="Nova Southeastern University"></a></div>
+        <div class="col-md-3 col-md-offset-1 col-sm-4 col-sm-offset-0" id="logo"><a href="http://www.nova.edu/" target="_blank"><img src="/images/logo.png" width="239" height="61" border="0" alt="Nova Southeastern University"></a></div>
         <div class="col-md-4 col-md-offset-1 col-sm-5 col-sm-offset-0" >
             <h3 class="nsu-title">Shark Internship Portal</h3>
         </div>
@@ -38,7 +38,7 @@
             <div class="col-sm-9 col-xs-8 padding-zero">
                 <img id="separator" src="../images/separator.png"/>
                 <div id="welcome">
-                    <b>Welcome, </b>Nicky Alvarez
+                    <b>Welcome, </b>{{ Auth::user()->name }}
                     <br />
                     <span id="log-span">You are currently logged in.</span>
                 </div>
@@ -47,12 +47,12 @@
         <div class="col-md-2 col-md-offset-5 col-sm-3 col-sm-offset-3 col-xs-4 col-xs-offset-0 padding-zero">
             <img id="separator2" src="../images/separator.png" />
             <div style="margin-top:6px;">
-                <a href="../functions/logout.php"><i class="fa fa-sign-out" style="padding-right: 3px;"></i>Logout</a>
-                <a id="help" style="margin-left:15px;" href="help.html"><i class="fa fa-question-circle" style="padding-right: 3px;"></i>Help</a>
+                <a href="{{ url('/logout') }}"><i class="fa fa-sign-out" style="padding-right: 3px;"></i>Logout</a>
+                <a id="help" style="margin-left:15px;" href="{{ url('/help') }}"><i class="fa fa-question-circle" style="padding-right: 3px;"></i>Help</a>
             </div>
             <div id="date" class="row">
                 <div class="">
-                    March 23, 2016
+                    {{ \Carbon\Carbon::now()->toFormattedDateString() }}
                 </div>
             </div>
         </div>

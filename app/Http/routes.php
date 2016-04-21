@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('main');
 });
 
 
@@ -28,4 +28,16 @@ Route::get('/user', function () {
 
 Route::get('/admin', function () {
     return view('homeAdmin');
+});
+
+Route::get('/help', function () {
+    return view('help');
+});
+
+Route::get('/internships', 'InternshipController@index');
+
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
+
+    //Route::get('/home', 'HomeController@index');
 });

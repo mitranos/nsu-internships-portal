@@ -30,25 +30,26 @@
                 <img class="logo-img-shark" src="images/shark-learn-logo.png">
             </div>
         </div>
-        <form class="form-signin login-form">
+        <form class="form-signin login-form" role="form" method="POST" action="{{ url('/login') }}">
+            {!! csrf_field() !!}
             <div id="invalid_Err_Msg">
                 The username or password you entered is incorrect. Please try again.
             </div><br />
-            <label for="username">Username:</label>
+            <label for="username">Email:</label>
             <span id="username_err" style="color:red;"></span>
             <div id="username_input_div">
-                <input type="text" id="username" class="form-control input-lg has-error" required autofocus><br />
+                <input type="text" type="email" id="email" name="email" value="{{ old('email') }}" class="form-control input-lg has-error" required autofocus><br />
             </div>
             <label for="password">Password:</label>
             <span id="password_err" style="color:red;"></span>
             <div id="password_input_div">
-                <input type="password" id="password" class="form-control input-lg" required><br />
+                <input type="password"  name="password" id="password" class="form-control input-lg" required><br />
             </div>
-            <button class="btn btn-lg btn-primary btn-block" type="button" onclick="LoginAJAX()">Login</button>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
         </form>
         <div class="row" style="margin-top:10px;">
             <div class="col-md-8" style="margin-top: 10px;">Don't have an account? <a href="/register">Register Here</a></div>
-            <div class="col-md-4" style="margin-top: 10px; "><a href="https://www.google.com">Forgot password?</a></div>
+            <div class="col-md-4" style="margin-top: 10px; "><a href="{{ url('/password/reset') }}">Forgot password?</a></div>
         </div>
         <div class="shark-info" style="margin-top:10px;">
             <p>Welcome to <b>Shark Portal, Nova Southeastern University</b>'s Internship Management System! To access the system, enter your SharkLink ID and password and click the Login button. If you experience technical difficulties, please contact XXXXX at XXXXX or XXXXX@nova.edu. If this is your first time accessing the Internship Management System, please click the Register Here link. Note that this portal will only give access to graduate students of the Nova community and admin users with pre-approved accounts.</p>
