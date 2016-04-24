@@ -1,36 +1,13 @@
-<!DOCTYPE html>
-<html lang="en-US">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+@extends('app')
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta id="request-method" name="request-method" content="GET">
-    <meta name="author" content="Nicky">
-    <meta name="keywords" content="Nicky">
-    <link rel="shortcut icon" href="../../images/only-nsu.png" type="image/png" />
-    <title>Shark Internship Portal</title>
-    <link rel="stylesheet" type="text/css" href="../styles/bootstrap.css" />
-    <link href="../../fonts/css/font-awesome.min.css" rel="stylesheet">
-    <link href="../../styles/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../styles/review_app.css" />
-    <script src="../../js/jquery-1.10.2.js"></script>
-    <script src="../../js/bootstrap.min.js"></script>
-    <script src="../../js/fileinput.min.js"></script>
-</head>
-<body>
-<header id="header" class="container">
-    <div class="row">
-        <div class="col-md-3 col-md-offset-1 col-sm-4 col-sm-offset-0" id="logo"><a href="http://nsu-sharkportal.netne.net/" target="_blank"><img src="../../images/logo.png" width="239" height="61" border="0" alt="Nova Southeastern University"></a></div>
-        <div class="col-md-4 col-md-offset-1 col-sm-5 col-sm-offset-0" >
-            <h3 class="nsu-title">Shark Internship Portal</h3>
-        </div>
-    </div>
-</header>
+@section('title', 'NSU Internship Portal')
+@section('description', 'description')
+@section('keywords', 'keywords')
+
+@section('content')
+
 <div class="col-lg-8 col-md-8 col-sm-10 col-sm-offset-1 col-xs-12 col-md-offset-2 col-lg-offset-2">
-    <div class="panel panel-primary">
+    <div class="panel-intern panel-primary">
         <div class="panel-heading">
             Application Details
         </div>
@@ -100,9 +77,4 @@
         </div>
     </div>
 </div>
-
-<div id="footer">
-    <p>&copy; 2016 Nova Southeastern University <span>|</span> 3301 College Avenue, Fort Lauderdale, Florida 33314-7796 <span>|</span> 800-541-6682</p>
-</div>
-</body>
-</html>
+@endsection

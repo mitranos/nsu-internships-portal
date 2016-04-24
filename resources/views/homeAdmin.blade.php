@@ -1,34 +1,11 @@
-<!DOCTYPE html>
-<html lang="en-US">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+@extends('app')
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta id="request-method" name="request-method" content="GET">
-    <meta name="author" content="Nicky">
-    <meta name="keywords" content="Nicky">
-    <link rel="shortcut icon" href="../images/only-nsu.png" type="image/png" />
-    <title>Shark Internship Portal</title>
-    <link rel="stylesheet" type="text/css" href="../styles/bootstrap.css" />
-    <link href="/fonts/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/styles/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../styles/a_home.css" />
-    <script src="/js/jquery-1.10.2.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/fileinput.min.js"></script>
-</head>
-<body>
-<header id="header" class="container">
-    <div class="row">
-        <div class="col-md-3 col-md-offset-1 col-sm-4 col-sm-offset-0" id="logo"><a href="http://www.nova.edu/" target="_blank"><img src="../images/logo.png" width="239" height="61" border="0" alt="Nova Southeastern University"></a></div>
-        <div class="col-md-4 col-md-offset-1 col-sm-5 col-sm-offset-0" >
-            <h3 class="nsu-title">Shark Internship Portal</h3>
-        </div>
-    </div>
-</header>
+@section('title', 'NSU Internship Portal')
+@section('description', 'description')
+@section('keywords', 'keywords')
+
+@section('content')
+
 <div class="well">
     <div id="menu" class="row">
         <div class="col-md-5 col-sm-6 col-xs-8">
@@ -116,18 +93,19 @@
                 <div class="tab-content">
 
                     <div role="tabpanel" class="tab-pane fade active in" id="tab_pending" aria-labelledby="pending-tab">
+                        @forelse(Auth::user()->professor_internships()->pending()->get() as $internship)
                         <table class="table table-hover">
                             <tbody>
                             <tr>
                                 <td>Date of Submission</td>
-                                <td>March 23,2016</td>
+                                <td>{{$internship->created_at->toFormattedDateString()}}</td>
                             </tr>
                             <tr>
                                 <td>Student Name</td>
-                                <td>Nicky Alvarez</td>
+                                <td>{{ $internship->student->name }}</td>
                             </tr>
                             <tr>
-                                <td><a href="#" style="text-decoration:underline">Review Application</a></td>
+                                <td><a href="{{url('/internship', $internship->id)}}" style="text-decoration:underline">Review Application</a></td>
                                 <td></td>
                             </tr>
                             <tr>
@@ -176,77 +154,62 @@
 
                         </table>
                         <div style="border-bottom: groove; margin-bottom:25px;"></div>
-
-                        <table class="table table-hover">
-                            <tbody>
-                            <tr>
-                                <td>Date of Submission</td>
-                                <td>March 23,2016</td>
-                            </tr>
-                            <tr>
-                                <td>Student Name</td>
-                                <td>Nicky Alvarez</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#" style="text-decoration:underline">Review Application</a></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">
-                                    <form role="form" class="form-horizontal">
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-4" for="status">Application Status</label>
-                                            <div class="col-sm-7">
-                                                <select id="status" class="form-control" required autofocus>
-                                                    <option>PENDING</option>
-                                                    <option>APPROVED</option>
-                                                    <option>DENIED</option>
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-4" for="reason">Reason of Denial</label>
-                                            <div class="col-sm-7">
-                                                <select id="reason" class="form-control" required autofocus>
-                                                    <option>Did not meet site criteria</option>
-                                                    <option>Did not meet academic criteria</option>
-                                                    <option>Other</option>
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-4" for="other-reason">Please Specify other reason</label>
-                                            <div class="col-sm-7">
-                                                <input id="other-reason" class="form-control" required autofocus />
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <div class="col-sm-offset-8 col-sm-3">
-                                                <button class="btn btn-primary btn-block" type="submit">Submit</button>
-                                            </div>
-                                        </div>
-
-                                    </form>
-                                </td>
-                            </tr>
-
-                            </tbody>
-
-                        </table>
-
-                        <div style="border-bottom: groove; margin-bottom:25px;"></div>
-
+                        @empty
+                            <br>
+                            <p style="font-style: italic; text-align: center; font-size: 25px">Currently there are no Pending Requests</p>
+                        @endforelse
                     </div>
 
                     <div role="tabpanel" class="tab-pane fade" id="tab_accepted" aria-labelledby="accepted-tab">
-                        accepted
+                        @forelse(Auth::user()->professor_internships()->accepted()->get() as $internship)
+                            <table class="table table-hover">
+                                <tbody>
+                                <tr>
+                                    <td>Date of Submission</td>
+                                    <td>{{$internship->created_at->toFormattedDateString()}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Student Name</td>
+                                    <td>{{ $internship->student->name }}</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="{{url('/internship', $internship->id)}}" style="text-decoration:underline">Review Application</a></td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+
+                            </table>
+                            <div style="border-bottom: groove; margin-bottom:25px;"></div>
+                        @empty
+                            <br>
+                            <p style="font-style: italic; text-align: center; font-size: 25px">Currently there are no Accepted Requests</p>
+                        @endforelse
                     </div>
 
                     <div role="tabpanel" class="tab-pane fade" id="tab_rejected" aria-labelledby="rejected-tab">
-                        rejected
+                        @forelse(Auth::user()->professor_internships()->rejected()->get() as $internship)
+                            <table class="table table-hover">
+                                <tbody>
+                                <tr>
+                                    <td>Date of Submission</td>
+                                    <td>{{$internship->created_at->toFormattedDateString()}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Student Name</td>
+                                    <td>{{ $internship->student->name }}</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="{{url('/internship', $internship->id)}}" style="text-decoration:underline">Review Application</a></td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+
+                            </table>
+                            <div style="border-bottom: groove; margin-bottom:25px;"></div>
+                        @empty
+                            <br>
+                            <p style="font-style: italic; text-align: center; font-size: 25px">Currently there are no Accepted Requests</p>
+                        @endforelse
                     </div>
 
                 </div>
@@ -514,43 +477,4 @@
 
     </div>
 </div>
-<div id="footer">
-    <p>Â©2016 Nova Southeastern University <span>|</span> 3301 College Avenue, Fort Lauderdale, Florida 33314-7796 <span>|</span> 800-541-6682</p>
-</div>
-<script>
-
-    $("#account-tab").on('click', function () {
-        $('#menuTabs li').removeClass('active');
-    });
-
-    /* ----------------------------------------------------------- */
-    /*  BOOTSTRAP ACCORDION-1
-     /* ----------------------------------------------------------- */
-
-    $('#accordion_1 .panel-collapse').on('shown.bs.collapse', function () {
-        $(this).prev().find(".fa").removeClass("fa-plus-square").addClass("fa-minus-square");
-    });
-
-    //The reverse of the above on hidden event:
-
-    $('#accordion_1 .panel-collapse').on('hidden.bs.collapse', function () {
-        $(this).prev().find(".fa").removeClass("fa-minus-square").addClass("fa-plus-square");
-    });
-
-    /* ----------------------------------------------------------- */
-    /*  BOOTSTRAP ACCORDION-2
-     /* ----------------------------------------------------------- */
-
-    $('#accordion_2 .panel-collapse').on('shown.bs.collapse', function () {
-        $(this).prev().find(".fa").removeClass("fa-plus-square").addClass("fa-minus-square");
-    });
-
-    //The reverse of the above on hidden event:
-
-    $('#accordion_2 .panel-collapse').on('hidden.bs.collapse', function () {
-        $(this).prev().find(".fa").removeClass("fa-minus-square").addClass("fa-plus-square");
-    });
-
-</script>
-</body>
-</html>
+@endsection

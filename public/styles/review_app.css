@@ -8,7 +8,6 @@
 	background: transparent url(../images/header_bg.png) repeat-x;
     padding-bottom:10px;
     width:100%;
-    margin-bottom:50px;
 	}
 
 .nsu-title{
@@ -25,7 +24,7 @@
     font-size: 20px;
     font-weight:600;
 }
-.panel{
+.panel-intern{
     background-color:#F2F5F9;
     border: 10px solid rgb(100, 100, 100); /* default color */
     border: 10px solid rgba(0, 0, 0, 0.3); /* rgba for transparency */

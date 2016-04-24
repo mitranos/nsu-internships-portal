@@ -13,7 +13,7 @@ class InternshipController extends Controller
 {
 
     public function index (){
-        return Internship::find(1)->student;
+        return User::all();
     }
 
     /**

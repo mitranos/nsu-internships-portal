@@ -25,4 +25,31 @@ class Internship extends Model
     {
         return $this->hasOne('App\Status', 'id', 'status');
     }
+
+    /**
+     * Continue the query to find denied internships
+     * @param $query
+     */
+    public function scopeRejected($query)
+    {
+        $query->where('status', '=', '1');
+    }
+
+    /**
+     * Continue the query to find pending internships
+     * @param $query
+     */
+    public function scopePending($query)
+    {
+        $query->where('status', '=', '2');
+    }
+
+    /**
+     * Continue the query to find accepted internships
+     * @param $query
+     */
+    public function scopeAccepted($query)
+    {
+        $query->where('status', '=', '3');
+    }
 }
