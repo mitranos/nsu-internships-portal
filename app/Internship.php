@@ -16,4 +16,13 @@ class Internship extends Model
         'supervisor_phone', 'supervisor_email', 'offer_letter', 'job_description',
     ];
 
+    public function student()
+    {
+        return $this->hasOne('App\User', 'id', 'user_id');
+    }
+
+    public function internship_status()
+    {
+        return $this->hasOne('App\Status', 'id', 'status');
+    }
 }

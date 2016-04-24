@@ -15,6 +15,7 @@ class CreateInternshipTable extends Migration
         Schema::create('internships', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned()->index();
+            $table->integer('professor_id')->unsigned()->index();
             $table->string('term');
             $table->string('major');
             $table->string('agency');
@@ -25,6 +26,8 @@ class CreateInternshipTable extends Migration
             $table->string('supervisor_email');
             $table->binary('offer_letter');
             $table->binary('job_description');
+            $table->integer('status');
+            $table->string('denial_reason');
             $table->timestamps();
         });
     }

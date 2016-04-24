@@ -18,6 +18,7 @@ class InternshipsTableSeeder extends Seeder
                 array (
                     'id' => '1',
                     'user_id' => '1',
+                    'professor_id' => '3',
                     'term' => 'Winter',
                     'major' => 'Software Engineering',
                     'agency' => 'Google',
@@ -28,12 +29,15 @@ class InternshipsTableSeeder extends Seeder
                     'supervisor_email' => 'page@google.com',
                     'offer_letter' => 'This is a blob offer letter',
                     'job_description' => 'This is a blob job description',
+                    'status' => '1',
+                    'denial_reason' => 'The internship is to far away to be performed.',
                     'created_at' => '2016-04-21 04:30:38',
                 ),
             1 =>
                 array (
                     'id' => '2',
                     'user_id' => '2',
+                    'professor_id' => '3',
                     'term' => 'Winter',
                     'major' => 'Computer Science',
                     'agency' => 'Uber',
@@ -44,6 +48,8 @@ class InternshipsTableSeeder extends Seeder
                     'supervisor_email' => 'travis@uber.com',
                     'offer_letter' => 'This is a blob offer letter',
                     'job_description' => 'This is a blob job description',
+                    'status' => '2',
+                    'denial_reason' => '',
                     'created_at' => '2016-04-21 04:30:38',
                 ),
 

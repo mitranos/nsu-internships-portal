@@ -39,7 +39,9 @@ class RouteServiceProvider extends ServiceProvider
     {
         $this->mapWebRoutes($router);
 
-        //
+        //Route Model Binding
+        $router->model('internship','App\Internship');
+
     }
 
     /**

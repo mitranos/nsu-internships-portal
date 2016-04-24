@@ -23,4 +23,14 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function student_internship()
+    {
+        return $this->hasOne('App\Internship', 'user_id');
+    }
+
+    public function professor_internships()
+    {
+        return $this->hasMany('App\Internship', 'professor_id');
+    }
 }

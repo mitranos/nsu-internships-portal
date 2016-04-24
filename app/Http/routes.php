@@ -34,6 +34,8 @@ Route::get('/help', function () {
     return view('help');
 });
 
+Route::get('internship/{internship}', 'InternshipController@show');
+
 Route::get('/internships', 'InternshipController@index');
 
 Route::group(['middleware' => 'web'], function () {

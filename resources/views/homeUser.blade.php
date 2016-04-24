@@ -85,35 +85,37 @@
                     <tbody>
                     <tr>
                         <th>Date of Submission</th>
-                        <th>March 23,2016</th>
+                        <th>{{ Auth::user()->student_internship->created_at->toFormattedDateString() }}</th>
                         <td></td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
                         <th>Supervisor</th>
-                        <th>Dr. Gomez Sanchez</th>
+                        <th>{{ Auth::user()->student_internship->supervisor }}</th>
                         <td></td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
                         <th>Company</th>
-                        <th>Citrix</th>
+                        <th>{{ Auth::user()->student_internship->agency }}</th>
                         <td></td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
                         <th>Application Status</th>
-                        <th><i>PENDING</i></th>
+                        <th><i>{{ Auth::user()->student_internship->internship_status->name }}</i></th>
                         <td></td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
+                        @if(Auth::user()->student_internship->status == 1)
+                        <td><b>Denial Reason</b></td>
+                        <td><b>{{Auth::user()->student_internship->denial_reason}}</b></td>
+                        @endif
                         <td></td>
                         <td></td>
                         <td></td>
