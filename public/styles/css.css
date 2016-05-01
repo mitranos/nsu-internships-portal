@@ -1,0 +1,665 @@
+body
+{
+    font-family:'Open Sans', Arial, sans-serif;
+    font-size:12px;
+    background:#0C5997 url(../images/page_bg.jpg) no-repeat fixed;
+}
+
+#header
+{
+    background:transparent url(../images/header_bg.png) repeat-x;
+    padding-bottom:10px;
+    width:100%;
+}
+
+.nsu-title
+{
+    padding-top:6px;
+    color:#FFF;
+    text-align:center;
+}
+
+#logo img
+{
+    margin-top:6px;
+}
+
+.well
+{
+    border:0;
+    border-radius:0;
+    background:inherit;
+    border-top:3px solid #FFF;
+    margin:0;
+    padding:0;
+}
+
+#menu
+{
+    color:#fff;
+    padding-top:15px;
+    background:#0C5997;
+    margin:0;
+}
+
+.col-xs-12
+{
+    padding:5px 0;
+}
+
+#account
+{
+    text-align:right;
+    margin-top:10px;
+}
+
+#separator
+{
+    float:left;
+    margin:0 10px;
+}
+
+#separator2
+{
+    margin-right:10px;
+    float:left;
+}
+
+#tabs
+{
+    color:#fff;
+    background:#0C5997;
+    margin:0;
+}
+
+#date
+{
+    color:#fff;
+    background:#0C5997;
+    margin:15px 0 0;
+}
+
+#x_content
+{
+    position:relative;
+    width:100%;
+    float:left;
+    clear:both;
+    margin-top:5px;
+    font-size:16px;
+    font-weight:600;
+}
+
+ul.bar_tabs
+{
+    overflow:visible;
+    height:20px;
+    margin-top:21px;
+    padding-left:14px;
+    position:relative;
+    z-index:1;
+    width:100%;
+}
+
+.nav-tabs > li.active > a,.nav-tabs > li.active > a:hover,.nav-tabs > li.active > a:focus
+{
+    color:#fff;
+    background-color:#22358c;
+}
+
+ul.bar_tabs > li
+{
+    border:2px solid #333;
+    color:#333!important;
+    margin-top:-17px;
+    margin-left:8px;
+    border-bottom:0;
+    border-radius:6px 6px 0 0;
+    background:#F2F5F9;
+}
+
+ul.bar_tabs a
+{
+    color:#333;
+    font-size:13px;
+    font-weight:600;
+}
+
+ul.bar_tabs > li.active
+{
+    border-right:6px solid #333;
+    border-top:0;
+    margin-top:-15px;
+    background:#22358c;
+    color:#fff;
+}
+
+ul.bar_tabs > li:hover a
+{
+    background:#22358c;
+    color:#fff;
+}
+
+ul.bar_tabs > li a
+{
+    background:#F2F5F9;
+    margin:0;
+    padding:7px 17px;
+}
+
+a:focus
+{
+    outline:none;
+}
+
+.panel-heading
+{
+    background:#0C5997;
+    border-top-right-radius:8px;
+    border-top-left-radius:8px;
+    font-size:14px;
+    font-weight:600;
+}
+
+.panel-group .panel
+{
+    border-radius:0;
+}
+
+.panel-body li
+{
+    text-align:justify;
+    margin-bottom:5px;
+}
+
+.panel-title > a
+{
+    color:#22358c;
+    display:block;
+    padding:10px 15px;
+}
+
+.panel-title > a:hover,.panel-title > a:focus
+{
+    text-decoration:none;
+    outline:none;
+    color:#333;
+}
+
+.panel-title > a span
+{
+    float:right;
+    font-size:20px;
+}
+
+.why-choose-group .panel-body p
+{
+    color:#555;
+    font-size:15px;
+    line-height:22px;
+}
+
+.admin
+{
+    float:right;
+    background:#333;
+}
+
+.navbar-inverse
+{
+    background-color:#22358c;
+    border-color:#080808;
+}
+
+.navbar
+{
+    margin-bottom:0;
+    min-height:20px;
+}
+
+.navbar-brand
+{
+    height:auto;
+    font-size:18px;
+    padding:10px 25px 10px 10px;
+}
+
+.navbar-inverse .navbar-toggle:hover,.navbar-inverse .navbar-toggle:focus
+{
+    background-color:#080808;
+}
+
+.navbar-inverse .navbar-toggle
+{
+    border-color:#080808;
+}
+
+.navbar-nav > li > a
+{
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+#footer
+{
+    clear:both;
+    padding-top:15px;
+    padding-bottom:2px;
+    background:#22358c;
+    margin-bottom:0;
+    -moz-box-shadow:0 1px 3px #000;
+    -webkit-box-shadow:0 1px 10px #000;
+    box-shadow:0 1px 10px #000;
+    text-align:center;
+    color:#fff;
+    font-size:14px;
+    position: fixed;
+    bottom:0px;
+    width: 100%;
+}
+
+.menu-panel
+{
+    margin-bottom:35px;
+}
+
+.panel
+{
+    background-color:#F2F5F9;
+    -moz-background-clip:padding;
+    -webkit-background-clip:padding-box;
+    background-clip:padding-box;
+    border-radius:20px;
+}
+
+.panel-body p
+{
+    text-align:justify;
+}
+
+.filter
+{
+    margin-top:40px;
+    margin-bottom:40px;
+}
+
+.filter li a
+{
+    font-size:14px;
+    color:#000;
+    font-weight:600;
+    border:1px solid #337ab7;
+    text-decoration:none;
+    border-radius:4px;
+    padding:7px 20px;
+}
+
+.filter li
+{
+    margin-bottom:10px;
+    position:relative;
+    cursor:pointer;
+    text-align:left;
+}
+
+.logo-img-shark
+{
+    height:auto;
+    width:100%;
+    margin-top:10px;
+}
+
+#invalid_Err_Msg
+{
+    background-color:#bc0b0b;
+    display:none;
+    color:#FFF;
+    padding:10px;
+}
+
+#nova-background
+{
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:url(../images/nova-under-water.jpg) no-repeat center center fixed;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    z-index:-1;
+}
+
+#middle-background
+{
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#F2F5F9 no-repeat center center fixed;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    z-index:-1;
+    padding:50px;
+}
+
+.from-container
+{
+    padding-bottom:25px;
+    margin-bottom:40px;
+    margin-top:30px;
+    background-color:#F7F7F7;
+    box-shadow:3px 3px 5px #000;
+    color:#666;
+}
+
+.shark-info
+{
+    padding-top:10px;
+    margin-top:10px;
+    border-top:1px dashed #707070;
+    border-bottom:1px dashed #707070;
+    text-align:justify;
+}
+
+.darkgrey
+{
+    text-align:center;
+}
+
+.panel-container
+{
+    color:#737373;
+}
+
+#whynsu
+{
+    color:#767474;
+}
+
+#whynsu p:first-child
+{
+    text-align:center;
+    font-size:1.5em;
+    margin-bottom:20px;
+}
+
+#whyleft strong,#whyright strong
+{
+    color:#0452A9;
+}
+
+#whyleft ul,#whyright ul
+{
+    margin:0;
+    padding:0;
+}
+
+#whyleft,#whyright
+{
+    margin-top:30px;
+}
+
+#whyleft ul li
+{
+    text-align:left;
+    list-style:none;
+    padding-left:30px;
+    float:left;
+    margin-bottom:10px;
+}
+
+#whyright ul li
+{
+    text-align:right;
+    list-style:none;
+    padding-right:30px;
+    float:right;
+    margin-bottom:10px;
+}
+
+#whyleft .one
+{
+    background:url(../images/whynsu_number1.png) no-repeat top left;
+    min-height:25px;
+    margin-left:50px;
+}
+
+#whyleft .two
+{
+    background:url(../images/whynsu_number2.png) no-repeat top left;
+    min-height:25px;
+}
+
+#whyleft .three
+{
+    background:url(../images/whynsu_number3.png) no-repeat top left;
+    min-height:25px;
+}
+
+#whyleft .four
+{
+    background:url(../images/whynsu_number4.png) no-repeat top left;
+    min-height:25px;
+}
+
+#whyleft .five
+{
+    background:url(../images/whynsu_number5.png) no-repeat top left;
+    min-height:25px;
+    margin-left:50px;
+}
+
+#whyright .six
+{
+    background:url(../images/whynsu_number6.png) no-repeat top right;
+    min-height:25px;
+    margin-right:50px;
+}
+
+#whyright .seven
+{
+    background:url(../images/whynsu_number7.png) no-repeat top right;
+    min-height:25px;
+}
+
+#whyright .eight
+{
+    background:url(../images/whynsu_number8.png) no-repeat top right;
+    min-height:25px;
+}
+
+#whyright .nine
+{
+    background:url(../images/whynsu_number9.png) no-repeat top right;
+    min-height:25px;
+}
+
+#whyright .ten
+{
+    background:url(../images/whynsu_number10.png) no-repeat top right;
+    min-height:25px;
+    margin-right:50px;
+}
+
+.panel-default > .panel-heading
+{
+    border-radius:0;
+    color:#333;
+    border-color:#22358c;
+    padding:0;
+}
+
+.padding-zero,#whynsu_bg
+{
+    padding:0;
+}
+
+#menu a,.navbar-inverse .navbar-brand,.navbar-inverse .navbar-nav > li > a
+{
+    color:#fff;
+}
+
+#tab_home.panel,#tab_settings.panel,#tab_internships.panel,#tab_account.panel,#tab_home.panel,#tab_resources.panel,#tab_internships.panel,#tab_account.panel
+{
+    margin-top:30px;
+    background-color:#F2F5F9;
+    border:10px solid rgba(0,0,0,0.3);
+    -moz-background-clip:padding;
+    -webkit-background-clip:padding-box;
+    background-clip:padding-box;
+    border-radius:20px;
+    min-height:400px;
+}
+
+.table-hover > tbody > tr:hover,.table-hover > tbody > tr:hover a,.table-hover > tbody > tr:hover
+{
+    background-color:#0C5997;
+    color:#FFF;
+}
+
+.navbar-inverse .navbar-nav > .active > a,.navbar-inverse .navbar-nav > .active > a:hover,.navbar-inverse .navbar-nav > .active > a:focus,.navbar-inverse .navbar-nav > .open > a,.navbar-inverse .navbar-nav > .open > a:hover,.navbar-inverse .navbar-nav > .open > a:focus
+{
+    color:#000;
+    background-color:#F2F5F9;
+}
+
+.filter li a:hover,.filter li a.active
+{
+    background:#337ab7;
+    color:#fff;
+}
+
+.panel-register,.panel-intern
+{
+    background-color:#F2F5F9;
+    border:10px solid rgba(0,0,0,0.3);
+    -moz-background-clip:padding;
+    -webkit-background-clip:padding-box;
+    background-clip:padding-box;
+    border-radius:20px;
+}
+
+@media only screen and (max-width: 480px) {
+    #welcome
+    {
+        margin-top:10px;
+    }
+
+    ul.bar_tabs
+    {
+        padding-left:0;
+    }
+
+    #middle-background
+    {
+        padding:30px 5px;
+    }
+
+    #whyleft .one,#whyleft .two,#whyleft .three,#whyleft .four,#whyleft .five
+    {
+        margin-left:0;
+    }
+
+    #log-span,#whynsu_bg,#whyright
+    {
+        display:none;
+    }
+}
+
+@media only screen and (min-width: 380px) and (max-width: 420px) {
+    ul.bar_tabs > li
+    {
+        margin-left:5px;
+    }
+
+    ul.bar_tabs > li a
+    {
+        padding:7px 10px;
+    }
+}
+
+@media only screen and (max-width: 379px) {
+    ul.bar_tabs > li
+    {
+        margin-left:3px;
+    }
+
+    ul.bar_tabs > li a
+    {
+        padding:7px 5px;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a
+    {
+        color:#fff;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    #middle-background
+    {
+        padding:30px 5px;
+    }
+
+    #whyleft .one,#whyleft .two,#whyleft .three,#whyleft .four,#whyleft .five
+    {
+        margin-left:0;
+    }
+
+    #whynsu_bg,#whyright
+    {
+        display:none;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    #middle-background
+    {
+        padding:30px 5px;
+    }
+
+    #whyleft .one,#whyleft .two,#whyleft .three,#whyleft .four,#whyleft .five
+    {
+        margin-left:0;
+    }
+
+    #whynsu_bg,#whyright
+    {
+        display:none;
+    }
+}
+
+@media only screen and (min-width: 340px) and (max-width: 379px) {
+    ul.bar_tabs > li
+    {
+        margin-left:3px;
+    }
+
+    ul.bar_tabs > li a
+    {
+        padding:7px 5px;
+    }
+}
+
+@media only screen and (max-width: 339px) {
+    ul.bar_tabs > li
+    {
+        margin-left:1px;
+    }
+
+    ul.bar_tabs > li a
+    {
+        padding:7px 2px;
+    }
+
+    ul.bar_tabs a
+    {
+        font-size:11px;
+    }
+}

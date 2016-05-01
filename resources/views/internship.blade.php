@@ -7,7 +7,7 @@
 @section('content')
 
 <div class="col-lg-8 col-md-8 col-sm-10 col-sm-offset-1 col-xs-12 col-md-offset-2 col-lg-offset-2">
-    <div class="panel-intern panel-primary">
+    <div class="panel-intern panel-primary" style="margin-top: 35px">
         <div class="panel-heading">
             Application Details
         </div>

@@ -208,7 +208,7 @@
                             <div style="border-bottom: groove; margin-bottom:25px;"></div>
                         @empty
                             <br>
-                            <p style="font-style: italic; text-align: center; font-size: 25px">Currently there are no Accepted Requests</p>
+                            <p style="font-style: italic; text-align: center; font-size: 25px">Currently there are no Rejected Requests</p>
                         @endforelse
                     </div>
 

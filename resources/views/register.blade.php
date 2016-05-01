@@ -8,8 +8,8 @@
 
 <div class="well">
 
-    <div class="row">
-        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-0 col-xs-offset-1  panel panel-primary menu-panel">
+    <div class="row" style="margin-top: 25px; margin-bottom: 50px">
+        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-0 col-xs-offset-1  panel-register panel-primary menu-panel">
             <div class="panel-body">
                 <ul class="nav nav-pills nav-stacked filter wow bounceIn" data-wow-delay="500ms">
                     <li class="active"><a data-toggle="pill" href="#register-Form">Registration Form</a></li>
@@ -26,7 +26,7 @@
 
         <div class="tab-content  col-lg-6 col-md-6 col-sm-7 col-sm-offset-1 col-xs-12 col-md-offset-1 col-lg-offset-1">
             <!-- Registration Form content -->
-            <div id="register-Form" class="tab-pane fade in active panel panel-primary">
+            <div id="register-Form" class="tab-pane fade in active panel-register panel-primary">
                 <div class="panel-heading">
                     Please fill in the following internship information. <span style="font-weight:500;">(All fields are mandatory.)</span>
                 </div>
@@ -192,7 +192,7 @@
             </div>
 
             <!-- Purpose content -->
-            <div id="purpose" class="tab-pane fade panel panel-primary">
+            <div id="purpose" class="tab-pane fade panel-register panel-primary">
                 <div class="panel-heading">
                     Purpose
                 </div>
@@ -208,7 +208,7 @@
             </div>
 
             <!-- Responsibilities content -->
-            <div id="responsibilities" class="tab-pane fade panel panel-primary">
+            <div id="responsibilities" class="tab-pane fade panel-register panel-primary">
                 <div class="panel-heading">
                     Responsibilities
                 </div>
@@ -222,7 +222,7 @@
             </div>
 
             <!-- Labor Internship Law content -->
-            <div id="labor-Internship-Law" class="tab-pane fade panel panel-primary">
+            <div id="labor-Internship-Law" class="tab-pane fade panel-register panel-primary">
                 <div class="panel-heading">
                     Department of Labor Internship Law
                 </div>
@@ -274,7 +274,7 @@
             </div>
 
             <!-- Responsibilities of NSU content -->
-            <div id="responsibilities-of-NSU" class="tab-pane fade panel panel-primary">
+            <div id="responsibilities-of-NSU" class="tab-pane fade panel-register panel-primary">
                 <div class="panel-heading">
                     Responsibilities of Nova Southeastern University
                 </div>
@@ -309,7 +309,7 @@
             </div>
 
             <!-- Responsibilities of Supervisor content -->
-            <div id="responsibilities-of-Supervisor" class="tab-pane fade panel panel-primary">
+            <div id="responsibilities-of-Supervisor" class="tab-pane fade panel-register panel-primary">
                 <div class="panel-heading">
                     Responsibilities of the Site Supervisor
                 </div>
@@ -352,7 +352,7 @@
             </div>
 
             <!-- Terms of Internship content -->
-            <div id="terms-of-Internship" class="tab-pane fade panel panel-primary">
+            <div id="terms-of-Internship" class="tab-pane fade panel-register panel-primary">
                 <div class="panel-heading">
                     Terms of Internship Arrangement
                 </div>
