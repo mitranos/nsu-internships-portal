@@ -41,6 +41,7 @@ class RouteServiceProvider extends ServiceProvider
 
         //Route Model Binding
         $router->model('internship','App\Internship');
+        $router->model('user','App\User');
 
     }
 

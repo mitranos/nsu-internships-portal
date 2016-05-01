@@ -38,6 +38,10 @@ Route::get('internship/{internship}', 'InternshipController@show');
 
 Route::get('/internships', 'InternshipController@index');
 
+Route::post('/admin', 'UserController@createAdmin');
+
+Route::get('/admin/{user}', 'UserController@destroy');
+
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
 

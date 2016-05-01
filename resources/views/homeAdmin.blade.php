@@ -251,62 +251,44 @@
 
                     <div role="tabpanel" class="tab-pane fade active in" id="tab_admin-list" aria-labelledby="admin-list-tab">
 
-
+                        @foreach(\App\User::admins()->get() as $admin)
                         <table class="table table-hover">
                             <tbody>
 
                             <tr>
                                 <td>Admin Name</td>
-                                <td>Nicky Alvarez</td>
+                                <td>{{ $admin->name }}</td>
                             </tr>
                             <tr>
                                 <td>Date of Creation</td>
-                                <td>March 23,2016</td>
+                                <td>{{ $admin->created_at->toFormattedDateString() }}</td>
                             </tr>
                             <tr>
-                                <td><a href="#" style="text-decoration:underline">Remove Admin</a></td>
+                                <td><a href="{{url('/admin', $admin->id)}}" style="text-decoration:underline">Remove Admin</a></td>
                                 <td></td>
                             </tr>
                             </tbody>
 
                         </table>
                         <div style="border-bottom: groove; margin-bottom:25px;"></div>
+                        @endforeach
 
-                        <table class="table table-hover">
-                            <tbody>
-
-                            <tr>
-                                <td>Admin Name</td>
-                                <td>Nicky Alvarez</td>
-                            </tr>
-                            <tr>
-                                <td>Date of Creation</td>
-                                <td>March 23,2016</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#" style="text-decoration:underline">Remove Admin</a></td>
-                                <td></td>
-                            </tr>
-                            </tbody>
-
-                        </table>
-                        <div style="border-bottom: groove; margin-bottom:25px;"></div>
                     </div>
 
                     <div role="tabpanel" class="tab-pane fade" id="tab_add-admin" aria-labelledby="add-admin-tab">
-                        <form role="form" class="form-horizontal register-form">
-
+                        <form role="form" class="form-horizontal register-form" method="POST" action="{{ url('/admin') }}">
+                            {!! csrf_field() !!}
                             <div class="form-group">
                                 <label class="control-label col-sm-3" for="name">Name:</label>
                                 <div class="col-sm-7">
-                                    <input type="text" id="name" class="form-control" required autofocus>
+                                    <input type="text" id="name" name="name" class="form-control" required autofocus>
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label col-sm-3" for="password">Password:</label>
                                 <div class="col-sm-7">
-                                    <input type="password" id="password" class="form-control" required>
+                                    <input type="password" name="password" id="password" class="form-control" required>
                                 </div>
                             </div>
 
@@ -314,7 +296,7 @@
                                 <label class="control-label col-sm-3" for="email">Email:</label>
                                 <div class="col-sm-7">
                                     <div class="input-group">
-                                        <input type="text" id="email" class="form-control" aria-describedby="email-addon" required autofocus>
+                                        <input type="text" id="email" name="email" class="form-control" aria-describedby="email-addon" required autofocus>
                                         <span class="input-group-addon" id="enmail-addon">@nova.edu</span>
                                     </div>
                                 </div>

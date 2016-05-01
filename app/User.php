@@ -12,7 +12,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'account_type',
     ];
 
     /**
@@ -32,5 +32,10 @@ class User extends Authenticatable
     public function professor_internships()
     {
         return $this->hasMany('App\Internship', 'professor_id');
+    }
+
+    public function scopeAdmins($query)
+    {
+        $query->where('account_type', '=', '1');
     }
 }
