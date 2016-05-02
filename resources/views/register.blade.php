@@ -26,6 +26,8 @@
 
         <div class="tab-content  col-lg-6 col-md-6 col-sm-7 col-sm-offset-1 col-xs-12 col-md-offset-1 col-lg-offset-1">
             <!-- Registration Form content -->
+            <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
+                {!! csrf_field() !!}
             <div id="register-Form" class="tab-pane fade in active panel-register panel-primary">
                 <div class="panel-heading">
                     Please fill in the following internship information. <span style="font-weight:500;">(All fields are mandatory.)</span>
@@ -34,23 +36,23 @@
                     <form role="form" class="form-horizontal register-form">
 
                         <div class="form-group">
-                            <label class="control-label col-sm-4" for="name">Name:</label>
+                            <label class="control-label col-sm-4" for="name">Full Name:</label>
                             <div class="col-sm-7">
-                                <input type="text" id="name" class="form-control" required autofocus>
+                                <input type="text" id="name" name="name" class="form-control" value="{{ old('name') }}" required autofocus>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label class="control-label col-sm-4" for="NsuId">NSU ID:</label>
                             <div class="col-sm-7">
-                                <input type="text" id="NsuId" class="form-control" required>
+                                <input type="text" id="NsuId" name="nsu_id" class="form-control" value="{{ old('nsu_id') }}" required>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label class="control-label col-sm-4" for="password">Password:</label>
                             <div class="col-sm-7">
-                                <input type="password" id="password" class="form-control" required>
+                                <input type="password" id="password" name="password" class="form-control" required>
                             </div>
                         </div>
 
@@ -58,7 +60,7 @@
                         <div class="form-group">
                             <label class="control-label col-sm-4" for="phoneNo">Phone Number:</label>
                             <div class="col-sm-7">
-                                <input type="text" id="phoneNo" class="form-control" required autofocus>
+                                <input type="text" id="phoneNo" name="phone" value="{{ old('phone') }}" class="form-control" required autofocus>
                             </div>
                         </div>
 
@@ -66,7 +68,7 @@
                             <label class="control-label col-sm-4" for="email">Email:</label>
                             <div class="col-sm-7">
                                 <div class="input-group">
-                                    <input type="text" id="email" class="form-control" aria-describedby="email-addon" required autofocus>
+                                    <input type="text" id="email" name="email" value="{{ old('email') }}" class="form-control" aria-describedby="email-addon" required autofocus>
                                     <span class="input-group-addon" id="enmail-addon">@nova.edu</span>
                                 </div>
                             </div>
@@ -190,6 +192,7 @@
                     </form>
                 </div>
             </div>
+            </form>
 
             <!-- Purpose content -->
             <div id="purpose" class="tab-pane fade panel-register panel-primary">

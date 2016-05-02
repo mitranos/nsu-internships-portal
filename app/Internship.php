@@ -14,6 +14,7 @@ class Internship extends Model
     protected $fillable = [
         'term', 'major', 'agency', 'agency_address', 'agency_website', 'supervisor', 
         'supervisor_phone', 'supervisor_email', 'offer_letter', 'job_description',
+        'status', 'denial_reason',
     ];
 
     public function student()

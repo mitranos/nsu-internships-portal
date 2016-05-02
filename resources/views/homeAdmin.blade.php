@@ -110,14 +110,16 @@
                             </tr>
                             <tr>
                                 <td colspan="2">
-                                    <form role="form" class="form-horizontal">
+                                    <form role="form" class="form-horizontal" method="post" action="{{url('/internship/update')}}">
+                                        {!! csrf_field() !!}
+                                        <input type="hidden" name="id" value="{{$internship->id}}">
                                         <div class="form-group">
                                             <label class="control-label col-sm-4" for="status">Application Status</label>
                                             <div class="col-sm-7">
-                                                <select id="status" class="form-control" required autofocus>
-                                                    <option>PENDING</option>
-                                                    <option>APPROVED</option>
-                                                    <option>DENIED</option>
+                                                <select id="status" name="status" class="form-control" required autofocus>
+                                                    <option value="2">PENDING</option>
+                                                    <option value="3">APPROVED</option>
+                                                    <option value="1">DENIED</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -125,7 +127,7 @@
                                         <div class="form-group">
                                             <label class="control-label col-sm-4" for="reason">Reason of Denial</label>
                                             <div class="col-sm-7">
-                                                <select id="reason" class="form-control" required autofocus>
+                                                <select id="reason" name="denial_reason" class="form-control" autofocus>
                                                     <option>Did not meet site criteria</option>
                                                     <option>Did not meet academic criteria</option>
                                                     <option>Other</option>
@@ -136,7 +138,7 @@
                                         <div class="form-group">
                                             <label class="control-label col-sm-4" for="other-reason">Please Specify other reason</label>
                                             <div class="col-sm-7">
-                                                <input id="other-reason" class="form-control" required autofocus />
+                                                <input id="other-reason" name="denial_reason" class="form-control" autofocus />
                                             </div>
                                         </div>
 

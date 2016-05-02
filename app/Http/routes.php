@@ -35,6 +35,7 @@ Route::get('/help', function () {
 });
 
 Route::get('internship/{internship}', 'InternshipController@show');
+Route::post('internship/update', 'InternshipController@update');
 
 Route::get('/internships', 'InternshipController@index');
 

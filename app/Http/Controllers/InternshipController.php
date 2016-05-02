@@ -27,4 +27,19 @@ class InternshipController extends Controller
         return view('internship', compact('internship'));
     }
 
+
+    /**
+     * Update the specified resource in storage.
+     * PUT /user/settings
+     *
+     * @param Request $request
+     * @return Response
+     */
+    public function update(Request $request)
+    {
+        $internship = Internship::find($request->id);
+        $internship->update($request->all());
+        return redirect('/');
+    }
+
 }
