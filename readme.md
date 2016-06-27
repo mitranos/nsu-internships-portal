@@ -1,6 +1,6 @@
 # NSU Internships Portal
 
-This project entails the construction of a platform to handle graduate student internshipp requests/submissions such that administrators will have the ability to manage those requests and	 provide approval statuses to students in a way that best facilitates our universities core values.Internship employers will also have access to this portal to provide student internship assessments.
+This project entails the construction of a platform to handle graduate student internship requests/submissions such that administrators will have the ability to manage those requests and	 provide approval statuses to students in a way that best facilitates our universities core values.Internship employers will also have access to this portal to provide student internship assessments.
 
 ## Technologies And Frameworks
 
@@ -10,10 +10,6 @@ It utiles a MYSQL Database, and [Vagrant](https://www.vagrantup.com/) for local 
 ## Official Documentation
 
 Documentation for this project can be found on the [Redmine website](http://http://198.211.108.62/).
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework!.
 
 ## Security Vulnerabilities
 
